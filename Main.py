@@ -5,8 +5,8 @@ import telegram.ext as tg_ext
 def load():
 	import Base as Base
 	Base.main(dp)
-	import Bangs as Bangs
-	Bangs.main(dp)
+	import TextParse as TextParse
+	TextParse.main(dp)
 
 updater = tg_ext.Updater((open('private/token.txt').read()))
 dp = updater.dispatcher
