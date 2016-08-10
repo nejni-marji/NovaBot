@@ -9,6 +9,8 @@ def load():
 	TextParse.main(dp)
 	import Utils
 	Utils.main(dp)
+	import Vortaro
+	Vortaro.main(dp)
 
 updater = tg_ext.Updater((open('private/token.txt').read()))
 dp = updater.dispatcher
