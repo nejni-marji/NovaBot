@@ -3,11 +3,11 @@ import telegram as tg
 import telegram.ext as tg_ext
 
 def load():
-	import Base as Base
+	import Base
 	Base.main(dp)
-	import TextParse as TextParse
+	import TextParse
 	TextParse.main(dp)
-	import Utils as Utils
+	import Utils
 	Utils.main(dp)
 
 updater = tg_ext.Updater((open('private/token.txt').read()))
