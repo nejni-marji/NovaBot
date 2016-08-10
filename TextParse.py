@@ -9,8 +9,9 @@ def text_parse(bot, update):
 def bang(bot, update):
 	bang = re.match('![a-zA-Z0-9]*', update.message.text)
 	if bang:
-		resp = 'You used the bang: `{}`'.format(bang.group()[1:])
-		bot.sendMessage(update.message.chat_id, resp)
+		resp = 'You used the bang: *{}*'.format(bang.group())
+		bot.sendMessage(update.message.chat_id, resp,
+		                parse_mode = tg.ParseMode.MARKDOWN)
 
 def main(dp):
 	dp.add_handler(tg_ext.MessageHandler([tg_ext.Filters.text], text_parse))
