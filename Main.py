@@ -7,6 +7,8 @@ def load():
 	Base.main(dp)
 	import TextParse as TextParse
 	TextParse.main(dp)
+	import Utils as Utils
+	Utils.main(dp)
 
 updater = tg_ext.Updater((open('private/token.txt').read()))
 dp = updater.dispatcher
