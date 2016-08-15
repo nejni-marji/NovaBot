@@ -30,7 +30,7 @@ def lookup(query):
 		if query in check or 'to ' + query in check:
 			results.append('*{}*: _{}_'.format(word, ', '.join(espdic[word])))
 	if not results:
-		return 'Mi trovis nenion.'
+		return 'Nenio trovita.'
 	return '\n'.join(sorted(results))
 
 def main(dp):
