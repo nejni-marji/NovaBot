@@ -10,7 +10,7 @@ espdic.remove('')
 def vortaro(bot, update, args):
 	bot.sendMessage(update.message.from_user.id, lookup(args),
 	                parse_mode = tg.ParseMode.MARKDOWN)
-	resp = 'Se vi ne ricevis mian privatan mesaĝon, bonvole mesaĝu al mi je /start.'
+	resp = 'Se vi ne ricevis mian privatan mesaĝon, bonvolu private mesaĝi min je /start.'
 	bot.sendMessage(update.message.chat_id, resp,
 	                reply_to_message_id = update.message.message_id,
 	                parse_mode = tg.ParseMode.MARKDOWN)
