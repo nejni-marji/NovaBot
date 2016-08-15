@@ -28,10 +28,9 @@ def lookup(query):
 		check = word.lower(), *list(i.lower() for i in espdic[word])
 		if query in check or 'to ' + query in check:
 			results.append('*{}*: _{}_'.format(word, ', '.join(espdic[word])))
-	return '\n'.join(sorted(results))
 	if not results:
 		return 'Mi trovis nenion.'
-	return '\n'.join(results)
+	return '\n'.join(sorted(results))
 
 def main(dp):
 	dp.add_handler(tg_ext.CommandHandler('v', vortaro, pass_args = True))
