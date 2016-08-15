@@ -20,14 +20,14 @@ def vortaro(bot, update, args):
 	                reply_to_message_id = update.message.message_id,
 	                parse_mode = tg.ParseMode.MARKDOWN)
 
-def lookup(args):
-	if not args:
+def lookup(query):
+	if not query:
 		return 'Vi devas specifi vorton aŭ vortojn.'
 	results = []
-	for line in espdic:
-		check = line.lower(), *list(i.lower() for i in espdic[line])
-		if args in check or 'to ' + args in check:
-			results.append('*{}*: _{}_'.format(line, ', '.join(espdic[line])))
+	for word in espdic:
+		check = word.lower(), *list(i.lower() for i in espdic[word])
+		if query in check or 'to ' + query in check:
+			results.append('*{}*: _{}_'.format(word, ', '.join(espdic[word])))
 	return '\n'.join(sorted(results))
 	if not results:
 		return 'Mi trovis nenion.'
