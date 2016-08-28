@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import re
+import re, datetime
 import telegram as tg
 import telegram.ext as tg_ext
 
@@ -13,6 +13,11 @@ for line in espdic_lines:
 	espdic[word] = definition
 
 def vortaro(bot, update, args):
+	user = update.message.from_user
+	print(datetime.datetime.utcnow().strftime('%F %T'))
+	print('{} {} [@{} {}]'.format(
+		user.first_name, user.last_name, user.username, user.id))
+	print(' '.join(args))
 	bot.sendMessage(update.message.from_user.id, lookup(' '.join(args)),
 	                parse_mode = tg.ParseMode.MARKDOWN)
 	if update.message.chat_id < 0:
