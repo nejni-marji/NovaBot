@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-import re
 import telegram as tg
 import telegram.ext as tg_ext
+import re
 
 def text_parse(bot, update):
 	bang(bot, update)

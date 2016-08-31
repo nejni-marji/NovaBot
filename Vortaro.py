@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-import re, datetime
 import telegram as tg
 import telegram.ext as tg_ext
+import re, datetime
 
 espdic_lines = open('private/espdic.txt').read().split('\n')
 espdic_lines.pop(0)
