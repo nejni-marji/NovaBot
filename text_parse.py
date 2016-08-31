@@ -13,6 +13,9 @@ def bang(bot, update):
 		print(resp)
 		#bot.send_message(update.message.chat_id, resp,
 		                #parse_mode = tg.ParseMode.MARKDOWN)
+	if '☭' in update.message.text:
+		bot.send_message(update.message.chat_id,
+						 'Workers of the world, unite!')
 
 def main(dp):
 	dp.add_handler(tg_ext.MessageHandler([tg_ext.Filters.text], text_parse))
