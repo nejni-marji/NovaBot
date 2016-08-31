@@ -11,6 +11,8 @@ def load():
 	utils.main(dp)
 	import vortaro
 	vortaro.main(dp)
+	import xkcd
+	xkcd.main(dp)
 
 updater = tg_ext.Updater((open('private/token.txt').read()))
 dp = updater.dispatcher
