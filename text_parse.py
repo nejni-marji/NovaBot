@@ -11,7 +11,7 @@ def bang(bot, update):
 	if bang:
 		resp = 'You used the bang: *{}*'.format(bang.group())
 		print(resp)
-		#bot.sendMessage(update.message.chat_id, resp,
+		#bot.send_message(update.message.chat_id, resp,
 		                #parse_mode = tg.ParseMode.MARKDOWN)
 
 def main(dp):
